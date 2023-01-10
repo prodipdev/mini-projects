@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Item Delete Style</title>
+</head>
+<body>
+<ul>
+    <li><data value="204">Green Tea</data></li>
+    <li><data value="205">Tomato Ketchup</data></li>
+    <li><data value="206">Roasted Coffee Beans</data></li>
+</ul>
+
+<div id="imgBox">
+    <p><img src="images/donation.jpg" alt="Eye AI"></p>
+    <button type="button" onclick="confirmDelete()">Delete Image</button>
+</div>
+<dialog id="confirmDialog">
+    <p>Are you sure you want to delete this item?</p>
+    <button type="button" onclick="deleteImage()">Yes</button>
+    <button type="button" onclick="hideDialog()">No</button>
+</dialog>
+<script src="js/script.js"></script>
+</body>
+</html>

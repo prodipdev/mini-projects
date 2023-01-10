@@ -1,0 +1,94 @@
+/* ----Style Rounding Earth */
+.glaxy-bg {
+    /* eatra option */
+    height: 100vh;
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+.glaxy {
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    margin-top: -50px;
+}
+@keyframes rounding {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.earth-stage {
+    width: 200px;
+    transform-origin: top right;
+    animation: rounding 5s linear infinite;
+    position: relative;
+    top: -100px;
+    left: -100px;
+}
+
+
+
+
+/*----Style Ping Pong----- */
+.stage {
+    width: 900px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+@keyframes ball {
+    0% {
+        left: -290px;
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        left: 290px;
+    }
+}
+@keyframes left-bat {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
+@keyframes right-bat {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+.left-bat {
+    height: 200px;
+    transform-origin: bottom right;
+    animation: left-bat 2s ease-in-out infinite;
+    display: flex;
+    justify-content: flex-end;
+}
+.right-bat {
+    height: 200px;
+    transform-origin: bottom left;
+    animation: right-bat 2s 1s ease-in-out infinite;
+    display: flex;
+    justify-content: flex-end;
+}
+.ball {
+    position: relative;
+    top: -100px;
+    left: -100px;
+    animation: ball 1s 1s ease-in-out infinite alternate;
+    z-index: 1;
+}
